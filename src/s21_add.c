@@ -7,21 +7,8 @@ int s21_add(s21_decimal num, s21_decimal num2, s21_decimal *res) {
   dec_to_null(res);
   if (correct(num) && correct(num2)) {
     scale_equalize(&num, &num2);
-    // if (!plus(num, num2, res)) {
-    //   if ((get_scale(num) == 0 || get_scale(num2) == 0) && sign == 0) {
-    //     result = 1;
-    //   } else if ((get_scale(num) == 0 || get_scale(num2) == 0) && sign == 1)
-    //   {
-    //     result = 2;
-    //   } else if (get_scale(num) > 0 && get_scale(num2) > 0) {
-    //     round_float(&num);
-    //     round_float(&num2);
-    //     result = s21_add(num, num2, res);
-    //   }
-    // } else {
     set_scale(res, get_scale(num));
     result = 0;
-    // }
     result = add_and_sign(num, num2, res, sign, sign2);
     if (first_unzero_bit(*res) && get_scale(*res)) {
       round_float(res);

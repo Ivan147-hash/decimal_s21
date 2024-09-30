@@ -22,6 +22,7 @@ void set_scale(s21_decimal *num, int scl) {
   }
 }
 
+// Устанавливает бит в биг децимал
 void set_bit_big(big_decimal *num, int index, int bit) {
   int num_ind = index / 32;
   int num_bit = index % 32;

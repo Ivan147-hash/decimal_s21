@@ -4,7 +4,6 @@
 int mul_to_10(s21_decimal *num) {
   int flag = 0;
   s21_decimal temp = {{0b1010, 0, 0, 0}};
-  // s21_decimal tmp = temp;
   s21_decimal tmp1 = {{0, 0, 0, 0}};
   for (int i = 0; i < 102; i++) {
     s21_decimal tmp = temp;

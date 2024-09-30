@@ -123,6 +123,7 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   return flag;
 }
 
+// Деление на 10
 void big_div_to_10(big_decimal *num, unsigned *rest) {
   uint64_t p_rest = 0;
   int div = 10;
